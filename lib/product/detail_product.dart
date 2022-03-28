@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers/product/catalog.dart';
 import 'package:sneakers/product/product_list.dart';
 
 class DetailProduct extends StatelessWidget {
@@ -85,31 +86,7 @@ class DetailMobilePage extends StatelessWidget {
                       product.type,
                       style: TextStyle(fontFamily: "OpenSans", fontSize: 12),
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Row(children: const [
-                        Icon(
-                          Icons.star,
-                          size: 10,
-                          color: Color(0xffE9C46A),
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 10,
-                          color: Color(0xffE9C46A),
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 10,
-                          color: Color(0xffE9C46A),
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 10,
-                          color: Color(0xffE9C46A),
-                        ),
-                      ]),
-                    ),
+                    BuildStar(),
                   ]),
                   Expanded(
                     child: BuildOrder(),

@@ -112,6 +112,7 @@ class CatalogList extends StatelessWidget {
                       "Review",
                       style: TextStyle(fontSize: 8),
                     ),
+                    BuildStar(),
                   ],
                 ),
               ),
@@ -200,6 +201,7 @@ class CatalogListGrid extends StatelessWidget {
                         "Review",
                         style: TextStyle(fontSize: 8),
                       ),
+                      BuildStar(),
                     ],
                   ),
                 ),
@@ -231,6 +233,39 @@ class _FavoriteButtonState extends State<FavoriteButton> {
           isFavorite = !isFavorite;
         });
       },
+    );
+  }
+}
+
+class BuildStar extends StatelessWidget {
+  const BuildStar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(5),
+      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+        Icon(
+          Icons.star,
+          size: 10,
+          color: Color(0xffE9C46A),
+        ),
+        Icon(
+          Icons.star,
+          size: 10,
+          color: Color(0xffE9C46A),
+        ),
+        Icon(
+          Icons.star,
+          size: 10,
+          color: Color(0xffE9C46A),
+        ),
+        Icon(
+          Icons.star,
+          size: 10,
+          color: Color(0xffE9C46A),
+        ),
+      ]),
     );
   }
 }
