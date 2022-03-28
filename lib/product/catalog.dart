@@ -7,7 +7,7 @@ class ProductCatalogue extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Product Catalogue"),
+          title: Text("Product Catalog"),
         ),
         body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
