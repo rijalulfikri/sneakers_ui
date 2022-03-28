@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:sneakers/product/detail_product.dart';
 import 'package:sneakers/product/product_list.dart';
 
-class ProductCatalog extends StatelessWidget {
+class ProductCatalogue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
-          title: Text("Hi Jhon"),
+          title: Text("Product Catalogue"),
         ),
         body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
@@ -63,12 +61,11 @@ class CatalogList extends StatelessWidget {
                       child: FavoriteButton(),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(right: 10, bottom: 4),
+                      padding: const EdgeInsets.only(right: 12, bottom: 8),
                       alignment: Alignment.bottomRight,
                       child: Image.asset("assets/images/icons/Intersect.png"),
                     ),
                     Container(
-                      padding: EdgeInsets.only(bottom: 5),
                       alignment: Alignment.bottomRight,
                       child: TextButton(
                         onPressed: () {

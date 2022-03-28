@@ -36,36 +36,37 @@ class DetailMobilePage extends StatelessWidget {
               alignment: AlignmentDirectional.topCenter,
               children: [
                 Container(
-                  margin: EdgeInsets.all(8),
-                  width: 400,
+                  width: 390,
+                  height: 325,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Color(0xffE9C46A)),
-                  child: Image.asset(product.image),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 25),
+                    child: Image.asset(product.image),
+                  ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton.icon(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: const Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.black,
+                SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton.icon(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.black,
+                          ),
+                          label: const Text(
+                            "Back",
+                            style: TextStyle(color: Colors.black),
+                          ),
                         ),
-                        label: const Text(
-                          "Back",
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.more_vert),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -195,13 +196,13 @@ class BuildOrder extends StatefulWidget {
 }
 
 class _BuildOrderState extends State<BuildOrder> {
-  int _qtyOrder = 1;
+  int _qtyOrder = 0;
   int stock = 35;
 
   int get qtyOrder => _qtyOrder;
   set qtyOrder(newQtyOrder) {
-    if (newQtyOrder <= 0) {
-      newQtyOrder = 1;
+    if (newQtyOrder < 0) {
+      newQtyOrder = 0;
     }
     _qtyOrder = newQtyOrder;
   }
