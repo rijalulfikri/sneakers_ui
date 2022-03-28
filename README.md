@@ -1,6 +1,6 @@
 # sneakers_ui
 
-A new Flutter project.
+Aplikasi sneaker_ui
 
 ## Getting Started
 
